@@ -14,6 +14,27 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-MRZScanner-MRZScannerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-MRZScanner-MRZScannerTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		BE1668C128A35436007BC651 /* NumberUppercase_Assist_8BHR.txt in Resources */ = {isa = PBXBuildFile; fileRef = BE1668AC28A35436007BC651 /* NumberUppercase_Assist_8BHR.txt */; };
+		BE1668C228A35436007BC651 /* NumberUppercase_Assist_upcase.prototxt in Resources */ = {isa = PBXBuildFile; fileRef = BE1668AD28A35436007BC651 /* NumberUppercase_Assist_upcase.prototxt */; };
+		BE1668C328A35436007BC651 /* NumberUppercase.txt in Resources */ = {isa = PBXBuildFile; fileRef = BE1668AE28A35436007BC651 /* NumberUppercase.txt */; };
+		BE1668C428A35436007BC651 /* NumberUppercase_Assist_1lIJ.prototxt in Resources */ = {isa = PBXBuildFile; fileRef = BE1668AF28A35436007BC651 /* NumberUppercase_Assist_1lIJ.prototxt */; };
+		BE1668C528A35436007BC651 /* NumberUppercase_Assist_number.txt in Resources */ = {isa = PBXBuildFile; fileRef = BE1668B028A35436007BC651 /* NumberUppercase_Assist_number.txt */; };
+		BE1668C628A35436007BC651 /* NumberUppercase.caffemodel in Resources */ = {isa = PBXBuildFile; fileRef = BE1668B128A35436007BC651 /* NumberUppercase.caffemodel */; };
+		BE1668C728A35436007BC651 /* NumberUppercase_Assist_8B.caffemodel in Resources */ = {isa = PBXBuildFile; fileRef = BE1668B228A35436007BC651 /* NumberUppercase_Assist_8B.caffemodel */; };
+		BE1668C828A35436007BC651 /* NumberUppercase_Assist_O0DQ.txt in Resources */ = {isa = PBXBuildFile; fileRef = BE1668B328A35436007BC651 /* NumberUppercase_Assist_O0DQ.txt */; };
+		BE1668C928A35436007BC651 /* NumberUppercase.prototxt in Resources */ = {isa = PBXBuildFile; fileRef = BE1668B428A35436007BC651 /* NumberUppercase.prototxt */; };
+		BE1668CA28A35436007BC651 /* NumberUppercase_Assist_8BHR.caffemodel in Resources */ = {isa = PBXBuildFile; fileRef = BE1668B528A35436007BC651 /* NumberUppercase_Assist_8BHR.caffemodel */; };
+		BE1668CB28A35436007BC651 /* NumberUppercase_Assist_upcase.caffemodel in Resources */ = {isa = PBXBuildFile; fileRef = BE1668B628A35436007BC651 /* NumberUppercase_Assist_upcase.caffemodel */; };
+		BE1668CC28A35436007BC651 /* NumberUppercase_Assist_8B.txt in Resources */ = {isa = PBXBuildFile; fileRef = BE1668B728A35436007BC651 /* NumberUppercase_Assist_8B.txt */; };
+		BE1668CD28A35436007BC651 /* NumberUppercase_Assist_upcase.txt in Resources */ = {isa = PBXBuildFile; fileRef = BE1668B828A35436007BC651 /* NumberUppercase_Assist_upcase.txt */; };
+		BE1668CE28A35436007BC651 /* NumberUppercase_Assist_O0DQ.caffemodel in Resources */ = {isa = PBXBuildFile; fileRef = BE1668B928A35436007BC651 /* NumberUppercase_Assist_O0DQ.caffemodel */; };
+		BE1668CF28A35436007BC651 /* NumberUppercase_Assist_number.caffemodel in Resources */ = {isa = PBXBuildFile; fileRef = BE1668BA28A35436007BC651 /* NumberUppercase_Assist_number.caffemodel */; };
+		BE1668D028A35436007BC651 /* NumberUppercase_Assist_number.prototxt in Resources */ = {isa = PBXBuildFile; fileRef = BE1668BB28A35436007BC651 /* NumberUppercase_Assist_number.prototxt */; };
+		BE1668D128A35436007BC651 /* NumberUppercase_Assist_1lIJ.txt in Resources */ = {isa = PBXBuildFile; fileRef = BE1668BC28A35436007BC651 /* NumberUppercase_Assist_1lIJ.txt */; };
+		BE1668D228A35436007BC651 /* NumberUppercase_Assist_8BHR.prototxt in Resources */ = {isa = PBXBuildFile; fileRef = BE1668BD28A35436007BC651 /* NumberUppercase_Assist_8BHR.prototxt */; };
+		BE1668D328A35436007BC651 /* NumberUppercase_Assist_O0DQ.prototxt in Resources */ = {isa = PBXBuildFile; fileRef = BE1668BE28A35436007BC651 /* NumberUppercase_Assist_O0DQ.prototxt */; };
+		BE1668D428A35436007BC651 /* NumberUppercase_Assist_8B.prototxt in Resources */ = {isa = PBXBuildFile; fileRef = BE1668BF28A35436007BC651 /* NumberUppercase_Assist_8B.prototxt */; };
+		BE1668D528A35436007BC651 /* NumberUppercase_Assist_1lIJ.caffemodel in Resources */ = {isa = PBXBuildFile; fileRef = BE1668C028A35436007BC651 /* NumberUppercase_Assist_1lIJ.caffemodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +64,27 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-MRZScanner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MRZScanner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = MRZScanner/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-MRZScanner-MRZScannerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRZScanner-MRZScannerTests.release.xcconfig"; path = "Target Support Files/Pods-MRZScanner-MRZScannerTests/Pods-MRZScanner-MRZScannerTests.release.xcconfig"; sourceTree = "<group>"; };
+		BE1668AC28A35436007BC651 /* NumberUppercase_Assist_8BHR.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NumberUppercase_Assist_8BHR.txt; sourceTree = "<group>"; };
+		BE1668AD28A35436007BC651 /* NumberUppercase_Assist_upcase.prototxt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NumberUppercase_Assist_upcase.prototxt; sourceTree = "<group>"; };
+		BE1668AE28A35436007BC651 /* NumberUppercase.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NumberUppercase.txt; sourceTree = "<group>"; };
+		BE1668AF28A35436007BC651 /* NumberUppercase_Assist_1lIJ.prototxt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NumberUppercase_Assist_1lIJ.prototxt; sourceTree = "<group>"; };
+		BE1668B028A35436007BC651 /* NumberUppercase_Assist_number.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NumberUppercase_Assist_number.txt; sourceTree = "<group>"; };
+		BE1668B128A35436007BC651 /* NumberUppercase.caffemodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = NumberUppercase.caffemodel; sourceTree = "<group>"; };
+		BE1668B228A35436007BC651 /* NumberUppercase_Assist_8B.caffemodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = NumberUppercase_Assist_8B.caffemodel; sourceTree = "<group>"; };
+		BE1668B328A35436007BC651 /* NumberUppercase_Assist_O0DQ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NumberUppercase_Assist_O0DQ.txt; sourceTree = "<group>"; };
+		BE1668B428A35436007BC651 /* NumberUppercase.prototxt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NumberUppercase.prototxt; sourceTree = "<group>"; };
+		BE1668B528A35436007BC651 /* NumberUppercase_Assist_8BHR.caffemodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = NumberUppercase_Assist_8BHR.caffemodel; sourceTree = "<group>"; };
+		BE1668B628A35436007BC651 /* NumberUppercase_Assist_upcase.caffemodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = NumberUppercase_Assist_upcase.caffemodel; sourceTree = "<group>"; };
+		BE1668B728A35436007BC651 /* NumberUppercase_Assist_8B.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NumberUppercase_Assist_8B.txt; sourceTree = "<group>"; };
+		BE1668B828A35436007BC651 /* NumberUppercase_Assist_upcase.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NumberUppercase_Assist_upcase.txt; sourceTree = "<group>"; };
+		BE1668B928A35436007BC651 /* NumberUppercase_Assist_O0DQ.caffemodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = NumberUppercase_Assist_O0DQ.caffemodel; sourceTree = "<group>"; };
+		BE1668BA28A35436007BC651 /* NumberUppercase_Assist_number.caffemodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = NumberUppercase_Assist_number.caffemodel; sourceTree = "<group>"; };
+		BE1668BB28A35436007BC651 /* NumberUppercase_Assist_number.prototxt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NumberUppercase_Assist_number.prototxt; sourceTree = "<group>"; };
+		BE1668BC28A35436007BC651 /* NumberUppercase_Assist_1lIJ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NumberUppercase_Assist_1lIJ.txt; sourceTree = "<group>"; };
+		BE1668BD28A35436007BC651 /* NumberUppercase_Assist_8BHR.prototxt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NumberUppercase_Assist_8BHR.prototxt; sourceTree = "<group>"; };
+		BE1668BE28A35436007BC651 /* NumberUppercase_Assist_O0DQ.prototxt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NumberUppercase_Assist_O0DQ.prototxt; sourceTree = "<group>"; };
+		BE1668BF28A35436007BC651 /* NumberUppercase_Assist_8B.prototxt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NumberUppercase_Assist_8B.prototxt; sourceTree = "<group>"; };
+		BE1668C028A35436007BC651 /* NumberUppercase_Assist_1lIJ.caffemodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = NumberUppercase_Assist_1lIJ.caffemodel; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -86,6 +128,7 @@
 		13B07FAE1A68108700A75B9A /* MRZScanner */ = {
 			isa = PBXGroup;
 			children = (
+				BE1668AB28A35436007BC651 /* MRZ */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -146,6 +189,34 @@
 				89C6BE57DB24E9ADA2F236DE /* Pods-MRZScanner-MRZScannerTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		BE1668AB28A35436007BC651 /* MRZ */ = {
+			isa = PBXGroup;
+			children = (
+				BE1668AC28A35436007BC651 /* NumberUppercase_Assist_8BHR.txt */,
+				BE1668AD28A35436007BC651 /* NumberUppercase_Assist_upcase.prototxt */,
+				BE1668AE28A35436007BC651 /* NumberUppercase.txt */,
+				BE1668AF28A35436007BC651 /* NumberUppercase_Assist_1lIJ.prototxt */,
+				BE1668B028A35436007BC651 /* NumberUppercase_Assist_number.txt */,
+				BE1668B128A35436007BC651 /* NumberUppercase.caffemodel */,
+				BE1668B228A35436007BC651 /* NumberUppercase_Assist_8B.caffemodel */,
+				BE1668B328A35436007BC651 /* NumberUppercase_Assist_O0DQ.txt */,
+				BE1668B428A35436007BC651 /* NumberUppercase.prototxt */,
+				BE1668B528A35436007BC651 /* NumberUppercase_Assist_8BHR.caffemodel */,
+				BE1668B628A35436007BC651 /* NumberUppercase_Assist_upcase.caffemodel */,
+				BE1668B728A35436007BC651 /* NumberUppercase_Assist_8B.txt */,
+				BE1668B828A35436007BC651 /* NumberUppercase_Assist_upcase.txt */,
+				BE1668B928A35436007BC651 /* NumberUppercase_Assist_O0DQ.caffemodel */,
+				BE1668BA28A35436007BC651 /* NumberUppercase_Assist_number.caffemodel */,
+				BE1668BB28A35436007BC651 /* NumberUppercase_Assist_number.prototxt */,
+				BE1668BC28A35436007BC651 /* NumberUppercase_Assist_1lIJ.txt */,
+				BE1668BD28A35436007BC651 /* NumberUppercase_Assist_8BHR.prototxt */,
+				BE1668BE28A35436007BC651 /* NumberUppercase_Assist_O0DQ.prototxt */,
+				BE1668BF28A35436007BC651 /* NumberUppercase_Assist_8B.prototxt */,
+				BE1668C028A35436007BC651 /* NumberUppercase_Assist_1lIJ.caffemodel */,
+			);
+			path = MRZ;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +314,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				BE1668D028A35436007BC651 /* NumberUppercase_Assist_number.prototxt in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				BE1668C928A35436007BC651 /* NumberUppercase.prototxt in Resources */,
+				BE1668D328A35436007BC651 /* NumberUppercase_Assist_O0DQ.prototxt in Resources */,
+				BE1668D228A35436007BC651 /* NumberUppercase_Assist_8BHR.prototxt in Resources */,
+				BE1668C128A35436007BC651 /* NumberUppercase_Assist_8BHR.txt in Resources */,
+				BE1668CE28A35436007BC651 /* NumberUppercase_Assist_O0DQ.caffemodel in Resources */,
+				BE1668C328A35436007BC651 /* NumberUppercase.txt in Resources */,
+				BE1668C428A35436007BC651 /* NumberUppercase_Assist_1lIJ.prototxt in Resources */,
+				BE1668C828A35436007BC651 /* NumberUppercase_Assist_O0DQ.txt in Resources */,
+				BE1668C728A35436007BC651 /* NumberUppercase_Assist_8B.caffemodel in Resources */,
+				BE1668CB28A35436007BC651 /* NumberUppercase_Assist_upcase.caffemodel in Resources */,
+				BE1668D528A35436007BC651 /* NumberUppercase_Assist_1lIJ.caffemodel in Resources */,
+				BE1668CF28A35436007BC651 /* NumberUppercase_Assist_number.caffemodel in Resources */,
+				BE1668CA28A35436007BC651 /* NumberUppercase_Assist_8BHR.caffemodel in Resources */,
+				BE1668C528A35436007BC651 /* NumberUppercase_Assist_number.txt in Resources */,
+				BE1668D128A35436007BC651 /* NumberUppercase_Assist_1lIJ.txt in Resources */,
+				BE1668CD28A35436007BC651 /* NumberUppercase_Assist_upcase.txt in Resources */,
+				BE1668D428A35436007BC651 /* NumberUppercase_Assist_8B.prototxt in Resources */,
+				BE1668CC28A35436007BC651 /* NumberUppercase_Assist_8B.txt in Resources */,
+				BE1668C228A35436007BC651 /* NumberUppercase_Assist_upcase.prototxt in Resources */,
+				BE1668C628A35436007BC651 /* NumberUppercase.caffemodel in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
