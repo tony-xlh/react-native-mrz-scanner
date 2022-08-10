@@ -18,7 +18,7 @@ export default function HomeScreen({route, navigation}) {
         style={styles.button}
         onPress={() => onPressed("Scanner")}
       >
-        <Text style={styles.buttonText}>Live Scan</Text>
+        <Text style={styles.buttonText}>Start Scanning</Text>
       </TouchableOpacity>
     </SafeAreaView>
   );
