@@ -16,12 +16,12 @@ import java.util.List;
  * `newArchEnabled` property). Is ignored otherwise.
  */
 public class MainApplicationTurboModuleManagerDelegate
-    extends ReactPackageTurboModuleManagerDelegate {
+        extends ReactPackageTurboModuleManagerDelegate {
 
   private static volatile boolean sIsSoLibraryLoaded;
 
   protected MainApplicationTurboModuleManagerDelegate(
-      ReactApplicationContext reactApplicationContext, List<ReactPackage> packages) {
+          ReactApplicationContext reactApplicationContext, List<ReactPackage> packages) {
     super(reactApplicationContext, packages);
   }
 
@@ -31,7 +31,7 @@ public class MainApplicationTurboModuleManagerDelegate
 
   public static class Builder extends ReactPackageTurboModuleManagerDelegate.Builder {
     protected MainApplicationTurboModuleManagerDelegate build(
-        ReactApplicationContext context, List<ReactPackage> packages) {
+            ReactApplicationContext context, List<ReactPackage> packages) {
       return new MainApplicationTurboModuleManagerDelegate(context, packages);
     }
   }
