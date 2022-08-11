@@ -6,15 +6,7 @@ import { Camera, useCameraDevices, useFrameProcessor } from 'react-native-vision
 import * as REA from 'react-native-reanimated';
 import { Svg, Image, Rect, Circle } from 'react-native-svg';
 import Clipboard from '@react-native-community/clipboard';
-
-
-const RecognizedCharacter =(props:{"char":DLRCharacherResult}) =>  {
-  if (props.char.characterHConfidence>50) {
-    return <Text style={[styles.modalText]}>{props.char.characterH}</Text>
-  }else{
-    return <Text style={[styles.modalText,styles.lowConfidenceText]}>{props.char.characterH}</Text>
-  }
-}
+import { MRZResultTable } from '../components/MRZResultTable';
 
 const scanRegion:ScanRegion = {
   left: 5,
@@ -252,14 +244,7 @@ export default function ScannerScreen({route}) {
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
             {renderImage()}
-            {recognitionResults.map((result, idx) => (
-              <Text key={"line-"+idx}>
-                {result.characterResults.map((char, idx) => (
-                  <RecognizedCharacter key={"char-"+idx} char={char}/>
-                ))}  
-              </Text>
-              
-            ))}
+            <MRZResultTable raw={getText()}/>
             <View style={styles.buttonView}>
                 <Pressable
                   style={[styles.button, styles.buttonClose]}
