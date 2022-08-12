@@ -66,6 +66,14 @@ export default function ScannerScreen({route}) {
     return text.trim();
   }
 
+  const getLineResults = () => {
+    let results:DLRLineResult[] = [];
+    recognitionResults.forEach(lineResult => {
+      results.push(lineResult);
+    });
+    return results;
+  }
+
   const renderImage = () =>{
     if (imageData) {
       return (
@@ -244,7 +252,7 @@ export default function ScannerScreen({route}) {
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
             {renderImage()}
-            <MRZResultTable raw={getText()}/>
+            <MRZResultTable recognitionResults={getLineResults()}/>
             <View style={styles.buttonView}>
                 <Pressable
                   style={[styles.button, styles.buttonClose]}
