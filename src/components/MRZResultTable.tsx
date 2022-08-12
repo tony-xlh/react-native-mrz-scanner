@@ -6,7 +6,7 @@ const parse = require('mrz').parse;
 export const MRZResultTable = (props:{recognitionResults:DLRLineResult[]}) => {
   const [parsedResult,setParsedResult] = React.useState(undefined as any);
   
-  const RecognizedCharacter =(props:{"char":DLRCharacherResult}) =>  {
+  const RecognizedCharacter =(props:{char:DLRCharacherResult}) =>  {
     if (props.char.characterHConfidence>50) {
       return <Text>{props.char.characterH}</Text>
     }else{
@@ -48,8 +48,8 @@ export const MRZResultTable = (props:{recognitionResults:DLRLineResult[]}) => {
         <>
           {props.recognitionResults.map((result, idx) => (
             <Text key={"line-"+idx}>
-              {result.characterResults.map((char, idx) => (
-                <RecognizedCharacter key={"char-"+idx} char={char}/>
+              {result.characterResults.map((char, cidx) => (
+                <RecognizedCharacter key={"char-"+cidx} char={char}/>
               ))}  
             </Text>
           ))} 
@@ -66,21 +66,19 @@ export const MRZResultTable = (props:{recognitionResults:DLRLineResult[]}) => {
       for (let key in parsedResult) {
         index = index + 1;
         let row = (
-          <>
-            <View
-              key={"row-"+index}
-              style={{
-                flexDirection: "row",
-              }}
-            >
-              <View style={styles.cell}>
-                <Text>{key}</Text>
-              </View>
-              <View style={styles.cell}>
-                <Text>{parsedResult[key]}</Text>
-              </View>
+          <View
+            key={"row-"+index}
+            style={{
+              flexDirection: "row",
+            }}
+          >
+            <View style={styles.cell}>
+              <Text>{key}</Text>
             </View>
-          </>
+            <View style={styles.cell}>
+              <Text>{parsedResult[key]}</Text>
+            </View>
+          </View>
         )
         rows.push(row);
       }
