@@ -21,7 +21,7 @@
     "react-native-screens": "^3.11.1",
     "react-native-svg": "^12.4.3",
     "react-native-vision-camera": "^2.14.0",
-    "vision-camera-dynamsoft-label-recognizer": "^0.2.2"
+    "vision-camera-dynamsoft-label-recognizer": "^0.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
