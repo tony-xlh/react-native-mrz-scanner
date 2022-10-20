@@ -59,6 +59,7 @@ export const MRZResultTable = (props:{recognitionResults:DLRLineResult[]}) => {
       } catch (error) {
         fields["text"] = raw;
       }
+      console.log(fields);
       setParsedResult(fields);
     }
   }, [props.recognitionResults]);

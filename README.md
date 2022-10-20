@@ -12,3 +12,47 @@ React Native MRZ Scanner using Vision Camera and the [Dynamsoft Label Recognizer
 1. `npm install`
 2. cd `ios` and run `pod install`
 3. `npx react-native run-android` or `run-ios`
+
+
+## Dark mode
+
+If your phone has dark mode on, it may fail to display some text correctly.
+
+## Android Resolution Bug of React Native Vision Camera
+
+The current version of React Native Vision Camera (2.14.0) has a bug of correctly setting the camera preview resolution. See [the pull request](https://github.com/mrousavy/react-native-vision-camera/pull/833) for details.
+
+You can update `CameraPreview.kt` as the following.
+
+Before:
+
+```kotlin
+// User has selected a custom format={}. Use that
+val format = DeviceFormat(format!!)
+Log.i(TAG, "Using custom format - photo: ${format.photoSize}, video: ${format.videoSize} @ $fps FPS")
+if (video == true) {
+  previewBuilder.setTargetResolution(format.videoSize)
+} else {
+  previewBuilder.setTargetResolution(format.photoSize)
+}
+imageCaptureBuilder.setTargetResolution(format.photoSize)
+imageAnalysisBuilder.setTargetResolution(format.photoSize)
+```
+
+After:
+
+```kotlin
+// User has selected a custom format={}. Use that
+val format = DeviceFormat(format!!)
+Log.i(TAG, "Using custom format - photo: ${format.photoSize}, video: ${format.videoSize} @ $fps FPS")
+val videoSize: Size
+if (context.resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT) {
+  videoSize = Size(format.videoSize.height, format.videoSize.width)
+}else {
+  videoSize = format.videoSize
+}
+
+previewBuilder.setTargetResolution(videoSize)
+imageCaptureBuilder.setTargetResolution(format.photoSize)
+imageAnalysisBuilder.setTargetResolution(videoSize)
+```
