@@ -27,34 +27,38 @@ export const MRZResultTable = (props:{recognitionResults:DLRLineResult[]}) => {
     console.log(props.recognitionResults);
     if (props.recognitionResults) {
       const raw = getText();
-      const result = parse(raw);
-      console.log(result);
       let fields:any = {};
-      fields["Document Code"] = result["fields"]["documentCode"];
-      fields["Document Number"] = result["fields"]["documentNumber"];
-      fields["First Name"] = result["fields"]["firstName"];
-      fields["Last Name"] = result["fields"]["lastName"];
-      fields["Birth Date"] = result["fields"]["birthDate"];
-      fields["Sex"] = result["fields"]["sex"];
-      fields["Nationality"] = result["fields"]["nationality"];
-      fields["Issuing State"] = result["fields"]["issuingState"];
-      fields["Expiration Date"] = result["fields"]["expirationDate"];
-      if (result["valid"] === true) {
-        fields["Valid"] = "True";
-      }else{
-        fields["Valid"] = "False";
+      try {
+        const result = parse(raw);
+        console.log(result);
+        fields["Document Code"] = result["fields"]["documentCode"];
+        fields["Document Number"] = result["fields"]["documentNumber"];
+        fields["First Name"] = result["fields"]["firstName"];
+        fields["Last Name"] = result["fields"]["lastName"];
+        fields["Birth Date"] = result["fields"]["birthDate"];
+        fields["Sex"] = result["fields"]["sex"];
+        fields["Nationality"] = result["fields"]["nationality"];
+        fields["Issuing State"] = result["fields"]["issuingState"];
+        fields["Expiration Date"] = result["fields"]["expirationDate"];
+        if (result["valid"] === true) {
+          fields["Valid"] = "True";
+        }else{
+          fields["Valid"] = "False";
+        }
+        fields["MRZ Code"] = (
+          <>
+            {props.recognitionResults.map((result, idx) => (
+              <Text key={"line-"+idx}>
+                {result.characterResults.map((char, cidx) => (
+                  <RecognizedCharacter key={"char-"+cidx} char={char}/>
+                ))}  
+              </Text>
+            ))} 
+          </>
+        );
+      } catch (error) {
+        fields["text"] = raw;
       }
-      fields["MRZ Code"] = (
-        <>
-          {props.recognitionResults.map((result, idx) => (
-            <Text key={"line-"+idx}>
-              {result.characterResults.map((char, cidx) => (
-                <RecognizedCharacter key={"char-"+cidx} char={char}/>
-              ))}  
-            </Text>
-          ))} 
-        </>
-      );
       setParsedResult(fields);
     }
   }, [props.recognitionResults]);
