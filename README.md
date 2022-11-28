@@ -3,7 +3,7 @@
 React Native MRZ Scanner using Vision Camera and the [Dynamsoft Label Recognizer plugin](https://github.com/xulihang/vision-camera-dynamsoft-label-recognizer).
 
 
-<video src="https://user-images.githubusercontent.com/5462205/184316999-97db81c5-75de-46a7-8890-ebf9b0f76262.mp4" data-canonical-src="https://user-images.githubusercontent.com/5462205/184316999-97db81c5-75de-46a7-8890-ebf9b0f76262.mp4" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px;">
+<video src="https://user-images.githubusercontent.com/5462205/204177715-b5644345-43b5-418a-afbc-a8277ef082c3.mp4" data-canonical-src="https://user-images.githubusercontent.com/5462205/204177715-b5644345-43b5-418a-afbc-a8277ef082c3.mp4" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px;">
 
   </video>
 
