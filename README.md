@@ -13,6 +13,9 @@ React Native MRZ Scanner using Vision Camera and the [Dynamsoft Label Recognizer
 2. cd `ios` and run `pod install`
 3. `npx react-native run-android` or `run-ios`
 
+## License
+
+A one-day trial license is used by default. You can apply for a 30-day license [here](https://www.dynamsoft.com/customer/license/trialLicense?product=dlr) and modify [this line](https://github.com/tony-xlh/react-native-mrz-scanner/blob/e541065302d1ec69243f0481ff61de9986fbece9/src/screens/Scanner.tsx#LL176C35-L176C35) to use it.
 
 ## Dark mode
 
