@@ -205,7 +205,7 @@ export default function ScannerScreen({route}) {
 
       console.log(results);
       if (modalVisibleShared.value === false) { //check is modal visible again since the recognizing process takes time
-        if (lineResults.length === 2 ) {
+        if (lineResults.length >= 2 ) {
           if (scanResult.imageBase64) {
             console.log("has image: ");
             setImageDataJS("data:image/jpeg;base64,"+scanResult.imageBase64);
@@ -241,6 +241,7 @@ export default function ScannerScreen({route}) {
             height={scanRegion.height/100*getFrameSize().height}
             strokeWidth="2"
             stroke="red"
+            fillOpacity={0}
           />
           {charactersSVG("char-cropped",getOffsetX(),getOffsetY())}
         </Svg>
