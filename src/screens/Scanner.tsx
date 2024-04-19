@@ -3,7 +3,7 @@ import * as React from 'react';
 import { StyleSheet, SafeAreaView, Alert, Modal, Pressable, Text, View, Platform, Dimensions } from 'react-native';
 import { recognize, ScanConfig, ScanRegion, DLRLineResult, DLRResult } from 'vision-camera-dynamsoft-label-recognizer';
 import * as DLR from 'vision-camera-dynamsoft-label-recognizer';
-import { Camera, useCameraDevice, useFrameProcessor } from 'react-native-vision-camera';
+import { Camera, runAsync, useCameraDevice, useFrameProcessor } from 'react-native-vision-camera';
 import { Svg, Image, Rect, Circle } from 'react-native-svg';
 import Clipboard from '@react-native-community/clipboard';
 import { MRZResultTable } from '../components/MRZResultTable';
@@ -104,7 +104,7 @@ export default function ScannerScreen({route}) {
     recognitionResults.forEach(lineResult => {
       lineResult.characterResults.forEach(characterResult => {
         characters.push(<Circle 
-          key={prefix+idx}
+          key={prefix+characterResult.location.points[0]!.x}
           cx={characterResult.location.points[0]!.x+offsetX} 
           cy={characterResult.location.points[3]!.y+offsetY+4} 
           r="1" stroke="blue" fill="blue"/>);
@@ -178,43 +178,46 @@ export default function ScannerScreen({route}) {
   const frameProcessor = useFrameProcessor((frame) => {
     'worklet'
     if (modalVisibleShared.value === false) {
+      runAsync(frame, () => {
+        'worklet'
+        updateFrameSizeJS(frame.width, frame.height);
+        let config:ScanConfig = {};
 
-      updateFrameSizeJS(frame.width, frame.height);
+        console.log("frame width:"+frame.width);
+        console.log("frame height:"+frame.height);
 
-      let config:ScanConfig = {};
+        config.scanRegion = scanRegion;
+        config.includeImageBase64 = true;
 
-      console.log("frame width:"+frame.width);
-      console.log("frame height:"+frame.height);
+        let scanResult = recognize(frame,config);
 
-      config.scanRegion = scanRegion;
-      config.includeImageBase64 = true;
-
-      let scanResult = recognize(frame,config);
-
-      let results:DLRResult[] = scanResult.results;
-      let lineResults:DLRLineResult[] = [];
-      for (let index = 0; index < results.length; index++) {
-        const result = results[index];
-        const lines = result?.lineResults;
-        if (lines) {
-          lines.forEach(line => {
-            lineResults.push(line);
-          });
-        }
-      }
-
-      console.log(results);
-      if (modalVisibleShared.value === false) { //check is modal visible again since the recognizing process takes time
-        if (lineResults.length >= 2 ) {
-          if (scanResult.imageBase64) {
-            console.log("has image: ");
-            setImageDataJS("data:image/jpeg;base64,"+scanResult.imageBase64);
+        let results:DLRResult[] = scanResult.results;
+        
+        let lineResults:DLRLineResult[] = [];
+        for (let index = 0; index < results.length; index++) {
+          const result = results[index];
+          const lines = result?.lineResults;
+          if (lines) {
+            lines.forEach(line => {
+              lineResults.push(line);
+            });
           }
-          setRecognitionResultsJS(lineResults);
-          modalVisibleShared.value = true;
-          setModalVisibleJS(true);
-        }  
-      }
+        }
+
+        console.log(results);
+        if (modalVisibleShared.value === false) { //check is modal visible again since the recognizing process takes time
+          if (lineResults.length >= 2 ) {
+            if (scanResult.imageBase64) {
+              console.log("has image: ");
+              setImageDataJS("data:image/jpeg;base64,"+scanResult.imageBase64);
+            }
+            setRecognitionResultsJS(lineResults);
+            modalVisibleShared.value = true;
+            setModalVisibleJS(true);
+          }  
+        }
+      })
+      
     }
   }, [])
 

@@ -19,9 +19,9 @@
     "react-native-safe-area-context": "^4.8.1",
     "react-native-screens": "^3.29.0",
     "react-native-svg": "^14.1.0",
-    "react-native-vision-camera": "^3.6.16",
-    "react-native-worklets-core": "^0.2.4",
-    "vision-camera-dynamsoft-label-recognizer": "^1.0.0"
+    "react-native-vision-camera": "^3.9.2",
+    "react-native-worklets-core": "^0.3.0",
+    "vision-camera-dynamsoft-label-recognizer": "^1.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
