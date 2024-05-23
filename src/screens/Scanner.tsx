@@ -26,7 +26,14 @@ export default function ScannerScreen({route}) {
   const [frameHeight, setFrameHeight] = React.useState(720);
   const [recognitionResults, setRecognitionResults] = React.useState([] as DLRLineResult[]);
   const device = useCameraDevice("back");
-  
+  const convertedCharacterResults = (records:Record<string,DLR.DLRCharacherResult>) => {
+    let results:DLR.DLRCharacherResult[] = [];
+    for (let index = 0; index < Object.keys(records).length; index++) {
+      const result = records[Object.keys(records)[index]];
+      results.push(result);
+    }
+    return results;
+  }
   React.useEffect(() => {
     (async () => {
       const status = await Camera.requestCameraPermission();
@@ -102,9 +109,9 @@ export default function ScannerScreen({route}) {
     let characters:React.ReactElement[] = [];
     let idx = 0;
     recognitionResults.forEach(lineResult => {
-      lineResult.characterResults.forEach(characterResult => {
+      convertedCharacterResults(lineResult.characterResults as any).forEach(characterResult => {
         characters.push(<Circle 
-          key={prefix+characterResult.location.points[0]!.x}
+          key={prefix+idx}
           cx={characterResult.location.points[0]!.x+offsetX} 
           cy={characterResult.location.points[3]!.y+offsetY+4} 
           r="1" stroke="blue" fill="blue"/>);
