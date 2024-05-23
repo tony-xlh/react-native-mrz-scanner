@@ -5678,15 +5678,15 @@ react-native-svg@^14.1.0:
     css-select "^5.1.0"
     css-tree "^1.1.3"
 
-react-native-vision-camera@*, react-native-vision-camera@^3.9.2:
-  version "3.9.2"
-  resolved "https://registry.npmmirror.com/react-native-vision-camera/-/react-native-vision-camera-3.9.2.tgz"
-  integrity sha512-watHRWbeH7CBYq/5sPj2fpZj87V8J5nGdmYO61aYsDLuJ2Pkij7anAzBf8B8oZiyoSUuYpAzX4lIIi+LjWVedA==
+react-native-vision-camera@*, react-native-vision-camera@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.npmmirror.com/react-native-vision-camera/-/react-native-vision-camera-4.0.5.tgz"
+  integrity sha512-MaNQPnRLf6RfWOvhrPb+qiwhOAQIhtWhXJck6UU5Xj0ehoC3SsZjbdPZ39V5BD1KifK1n2YnuS0tzGw/zfrBzg==
 
-react-native-worklets-core@*, react-native-worklets-core@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.npmmirror.com/react-native-worklets-core/-/react-native-worklets-core-0.3.0.tgz"
-  integrity sha512-bOoo6xbl+f+mz0Q65bLkUP3FxgYt7f/Bzi0c5Yj8Ix4vQCKMtgHwafrqCNRhW32N7TpTv3+zOoyQMJwQVr/frQ==
+react-native-worklets-core@*, react-native-worklets-core@^1.3.3:
+  version "1.3.3"
+  resolved "https://registry.npmmirror.com/react-native-worklets-core/-/react-native-worklets-core-1.3.3.tgz"
+  integrity sha512-wlkuhpUo4Wd9WBcnKuXWv775rYNYMfDxUySCZYxd3VDtwnF8PHPqAJllVIlHjamPNKpcitFvAgQa/C3YOsJwgQ==
   dependencies:
     string-hash-64 "^1.0.3"
 
@@ -6651,10 +6651,10 @@ vary@~1.1.2:
   resolved "https://registry.npmmirror.com/vary/-/vary-1.1.2.tgz"
   integrity sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==
 
-vision-camera-dynamsoft-label-recognizer@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.npmmirror.com/vision-camera-dynamsoft-label-recognizer/-/vision-camera-dynamsoft-label-recognizer-1.2.0.tgz"
-  integrity sha512-50KbX3AnR80B2Qf9L6um7Ys9TZQKUHiK+n/Md5RxlvzPXmevLhJUTjKZwEo7sZm5g1UBmQFWGlaq80enkDtzwQ==
+vision-camera-dynamsoft-label-recognizer@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmmirror.com/vision-camera-dynamsoft-label-recognizer/-/vision-camera-dynamsoft-label-recognizer-2.0.0.tgz"
+  integrity sha512-YqVcntpjfm3s0MZ0flbgDuwRqpMVG9B1/K+Css/TJU/Xf0BnMbP9y59EiTdmpFM5TLHDfgrA/VwrSaIE5kTuLw==
 
 vlq@^1.0.0:
   version "1.0.1"
