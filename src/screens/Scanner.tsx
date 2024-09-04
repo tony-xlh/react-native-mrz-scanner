@@ -1,11 +1,10 @@
 import * as React from 'react';
 
-import { StyleSheet, SafeAreaView, Alert, Modal, Pressable, Text, View, Platform, Dimensions } from 'react-native';
+import { Clipboard, StyleSheet, SafeAreaView, Alert, Modal, Pressable, Text, View, Platform, Dimensions } from 'react-native';
 import { recognize, ScanConfig, ScanRegion, DLRLineResult, DLRResult } from 'vision-camera-dynamsoft-label-recognizer';
 import * as DLR from 'vision-camera-dynamsoft-label-recognizer';
 import { Camera, runAsync, useCameraDevice, useFrameProcessor } from 'react-native-vision-camera';
 import { Svg, Image, Rect, Circle } from 'react-native-svg';
-import Clipboard from '@react-native-community/clipboard';
 import { MRZResultTable } from '../components/MRZResultTable';
 import { Worklets, useSharedValue } from 'react-native-worklets-core';
 
@@ -170,10 +169,8 @@ export default function ScannerScreen({route}) {
 
   const HasRotation = () => {
     let value = false
-    if (Platform.OS === 'android') {
-      if (!(frameWidth>frameHeight && Dimensions.get('window').width>Dimensions.get('window').height)){
-        value = true;
-      }
+    if (!(frameWidth>frameHeight && Dimensions.get('window').width>Dimensions.get('window').height)){
+      value = true;
     }
     return value;
   }
