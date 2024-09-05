@@ -21,3 +21,9 @@ A one-day trial license is used by default. You can apply for a 30-day license [
 
 If your phone has dark mode on, it may fail to display some text correctly.
 
+## Blog
+
+[Build a React Native MRZ Scanner using Vision Camera](https://www.dynamsoft.com/codepool/react-native-mrz-scanner-vision-camera.html)
+
+
+
