@@ -15,7 +15,7 @@ React Native MRZ Scanner using Vision Camera and the [Dynamsoft Label Recognizer
 
 ## License
 
-A one-day trial license is used by default. You can apply for a 30-day license [here](https://www.dynamsoft.com/customer/license/trialLicense?product=dlr).
+A one-day trial license is used by default. You can apply for a 30-day license [here](https://www.dynamsoft.com/customer/license/trialLicense/?product=dcv&package=cross-platform).
 
 ## Dark mode
 
